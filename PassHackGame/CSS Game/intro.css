@@ -1,0 +1,43 @@
+*{
+margin:0px;
+padding:0px;
+}
+/*sets dimensions of the progress bar*/
+#loadBar{
+	margin-top:2%;
+	height:26px;
+	width:500px;
+
+}
+/*refers to the inner green bar that will expand gradually*/
+#status{
+width:0%;
+height:100%;
+background-color:green;
+transition:3s;
+overflow:hidden;
+}
+/*gives padding and transition*/
+#load{
+padding:10px;
+width:4em;
+transition:5s;
+}
+/*refers to the button of check f mail*/
+#button{
+opacity:0;
+font-type:sans serif; 
+margin-top:15%; 
+width:15em; 
+z-index:1; 
+padding:5px; 
+background-color:rgba(220,220,220,.8);
+
+}
+#button:hover{
+background-color:rgba(41, 42, 49,.8);
+color:white;
+transition:1.5s;
+cursor:pointer;
+padding:10px;
+}

@@ -1,0 +1,95 @@
+body{
+background-image:url('fmail.jpg');
+background-size:cover;
+}
+/*refers to the logo of the FMAIL*/
+.box{
+float:left;
+height:25%;
+width:15%;
+
+}
+
+/*makes sure that the image covers the logo area 100%*/
+img{
+width:100%;
+height:100%;
+}
+/*refers to the side area that contains info such as the storage*/
+#column{
+clear:left;
+float:left;
+margin-top:3%;
+height:65%;
+width:15%;
+background-color:rgba(0,0,0,.3);
+}
+/*only affects the p elements in the column*/
+#column p{
+font-family:sans serif; 
+text-align:center; 
+border-bottom:solid; 
+border-width:.3px;
+padding:10px;
+color:white;
+}
+
+#column p:hover{
+background-color:rgba(255,255,255,.5);
+color:black;
+transition:1.5s;
+cursor:pointer;
+}
+
+/*this will change the appearance of the narrow box which will hold the title of the inbox message*/
+#message{
+width:70%;
+height:5%;
+background-color:rgba(255,255,255,1);
+opacity:.5;
+float:right;
+margin-right:7%;
+margin-top:3%;
+font-family:sans serif;
+padding:10px;
+font-style:italic;
+cursor:pointer;
+}
+
+/*stylizes the full message box when expanded*/
+#fullmess{
+clear:right;
+margin-right:7%;
+width:73%;
+height:70%;
+float:right;
+background-color:white;
+display:none;
+padding:10px;
+font-family:pixel;
+font-size:30px;
+}
+/*custom font type which is pixelated*/
+@font-face {
+    font-family: pixel;
+    src: url(dotty.ttf);
+}
+/*the button which link to the game*/
+#button2{
+float:right;
+margin-top:8%;
+width:10em;
+height:1em;
+background-color:rgba(220,220,220,.8);
+text-align:center;
+font-family:pixel;
+font-size:30px;
+padding:5px;
+}
+
+#button2:hover{
+background-color:rgba(41, 42, 49,.8);
+color:white;
+transition:1.5s;
+cursor:pointer;
+}

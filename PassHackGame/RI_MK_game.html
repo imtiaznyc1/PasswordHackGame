@@ -1,0 +1,153 @@
+<!idoctype html>
+<html>
+<head>
+	<title>Passcode Hacker</title>
+	 <link rel="stylesheet" type="text/css" href="CSS Game/gamec.css">
+<style>
+@font-face {
+    font-family: pixel;
+    src: url(dotty.ttf);
+}
+
+#small{
+	margin-top:-4%;
+	margin-left:200%;
+	padding:1%;
+	background-color:white;
+	width:100%;
+	height:20%;
+	color:black;
+	text-align:;
+	z-index:1000;
+	transition:1s;
+	position:absolute;
+	overflow-x:hidden;
+	overflow-y: scroll;
+	font-family:pixel;
+	font-size:140%;
+}
+		
+#userInteraction{
+font-size:120%;
+}
+
+#small p{
+font-size:70%;
+}
+
+#retry:hover{
+background-color:white;
+color:black;
+border-radius: 5px;
+cursor:pointer;
+transition:1s;
+padding:.1px 4px .1px 4px;
+}
+
+#hints{
+float:right;
+margin-right:6%;
+font-size:150%;
+font-family:pixel;
+padding:1%;
+padding-left:3%;
+padding-right:3%;
+color:white;
+}
+
+#hints:hover{
+margin-top:-2%;
+background-color:white;
+color:black;
+border-radius: 5px 20px 5px;
+cursor:pointer;
+transition:1s;
+}
+</style>
+</head>
+
+
+<body>
+<div id="gif" style="clear:left; height:10%; width:30%; background-image:url(programming.gif); background-size:cover; margin-top:-7%; margin-left:35%; position:fixed;"></div>
+<!--this will be in the top left corner and will change color based on the color of the bars-->
+<div id="title">The Passcode Game</div>
+<!--the help div will refer to the whole top right corner section that will hold the menu for three things-->
+<div id="help">
+<div id="area">
+<span onclick="combine3();" id="q">ABOUT THE CREATORS</span>
+<span onclick="combine2();" id="q">&#63;</span>
+<span id="hints">HINTS</span>
+</div>
+<!--when this x is clicked the text box will retract to the side-->
+<b><span onclick="retract();" id="x" style="font-size:132%;">&#215;</span></b>
+</div>
+ 
+ <!--this is the actual text box-->
+ <div id="small">
+<span style="float: left; color:black; font-size:130%;">
+		<!--the par will hold the text for the questions and the about us-->
+		<p id="par"></p>
+		<!--these 8 p elements will eventually be filled with hints as the user discovers them throughout the game-->
+		<p id="hint1" style="color:black;"></p>
+        <p id="hint2"></p>
+        <p id="hint3"></p>
+        <p id="hint4"></p>
+        <p id="hint5"></p>
+        <p id="hint6"></p>
+        <p id="hint7"></p>
+        <p id="hint8"></p></span>
+   </div>
+
+   <!--this set of classed and id's will control the sound bars jumping up and down-->
+<div id="container">
+<div id="c1"><div class="jump"id="v1"></div></div>
+<div id="c2"><div class="jump"id="v2"></div></div>
+<div id="c3"><div class="jump"id="v3"></div></div>
+<div id="c4"><div class="jump"id="v4"></div></div>
+</div>
+<!--this will be the main user interface in the game such as the main menu or the gam site-->
+<center><div id="gamebox">
+	<!--the userInteraction will show the hints and what the user is typing real time-->
+	<div id="userInteraction" style="display:none;">
+	<!--on top of everything which will show how many tries are left in the game-->
+	<span id="numOfTries" style="position:fixed; left:46%; bottom:%:">TRIES LEFT: <span id="b">8</span></span>
+	<p id="txt" style="color:black;"></p>
+	 <p id="amazing"></p>
+        <p id="test"></p>
+        <p id="hint" style="color:white;"></p>
+        
+	</div>
+
+	<!--the hello div is the greeting message in the beginning-->
+	<br><span id="hello" style="font-size:120%; transition: 600ms;">HELLO THERE!</span>
+	<!--act as a toggle for the user to chose between hard or normal mode-->
+	<br><i><span id="diff" style="transition: 600ms;">DIFFICULTY:&nbsp;<span id="diff">CHOOSE A MODE</span></span></i>
+	<br><br><br><span id="begin">START GUESSING - (I GUESS?)</span><span id="comment" style="color:black; font-size:70%;"><br><br>(YOU CAN'T START THE GAME WITHOUT PICKING A MODE. DO SO NOW!)</span>
+	<br><br><span id="stat" onclick="fade();" >STATISTICS</span><br><br><br>
+	<span id="mode">MODE:&nbsp;&nbsp;<br><span id="norm" onclick="change('norm');" style="">|&nbsp;&nbsp;NORMAL&nbsp;|</span>&nbsp;<br><br><span id="hard" onclick="change('hard');">|&nbsp;&nbsp;HARD&nbsp;&nbsp;| </span></span>
+	<br><div id="scoreboard" style="display:none;">NUMBER OF TIMES PLAYED:&nbsp;&nbsp; <span id="r">0</span><br><br>
+						 WINS:&nbsp;&nbsp;<span id="wins">0</span> <br><br>
+						 LOSSES:&nbsp;&nbsp; <span id="loss">0</span><br><br>
+						 AVERAGE NUMBER OF GUESSES:&nbsp;&nbsp;<span id="avg">0</span> <br><br> 
+						 MEDIAN NUMBER OF GUESSES:&nbsp;&nbsp; <span id="med">0</span><br><br>
+<span id="return" onclick="back();" style="color:white font-size:130%; left:37%; bottom: 37%; position: fixed;">&#8617;</span>
+<span id="retry" onclick="cont();" style="color:white font-size:130%; left:59.5%; bottom: 37%; position:fixed; display:none;">&#8635;</span></div>
+
+</div></center>
+
+<center><input type="text" id="userInput"  onkeydown="enter(event)"  maxlength="4"></center>
+
+<audio volume="0.1" id="myAudio" style="display:none;" src="gamemusic.mp3" autoplay loop></audio>
+<script src="Javascript Game/game.js">
+
+
+	
+
+
+</script>
+</body
+
+
+
+
+</html>
